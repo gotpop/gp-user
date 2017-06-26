@@ -11,6 +11,7 @@
     "e2e": "ng e2e",
     "postinstall": "ng build --aot -prod"
   },
+  "main": "server.js",
   "private": true,
   "dependencies": {
     "@angular/animations": "^4.0.0",
