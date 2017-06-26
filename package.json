@@ -2,6 +2,7 @@
   "name": "gp-user",
   "version": "0.0.0",
   "license": "MIT",
+  "description": "GotPop user",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
