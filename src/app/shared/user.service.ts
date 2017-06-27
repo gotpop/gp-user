@@ -12,11 +12,12 @@ export class UserService {
   }
 
   setValue(val) {
+    console.log(this.myValue);
     this.myValue = val;
   }
 
   getValue() {
-    console.log('Nuts!');
+    console.log(this.myValue);
     return this.myValue;
   }
 }
