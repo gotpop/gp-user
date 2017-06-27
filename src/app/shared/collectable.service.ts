@@ -1,5 +1,7 @@
+import { Collectable } from './collectable.model'
+
 export class CollectableService {
-  private collectables = [
+  private collectables: Collectable[] = [
     { description: 'Lorem ipsum dolor sit amet, consectetur', type: 'book' },
     { description: 'Lorem ipsum dolor sit amet, consectetur', type: 'book' }
   ]
