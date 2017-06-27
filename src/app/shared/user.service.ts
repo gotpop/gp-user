@@ -1,13 +1,22 @@
-import { User } from './user.model'
+import {Injectable} from "@angular/core";
+import { User } from './user.model';
 
+@Injectable()
 export class UserService {
-  myUser = User
+  private myValue;
 
-  getUser () {
-    return this.myUser;
+  constructor() { }
+
+  makeModel() {
+    return new User('', '', '');
   }
 
-  logIt() {
-    console.log('Check it out!')
+  setValue(val) {
+    this.myValue = val;
+  }
+
+  getValue() {
+    console.log('Nuts!');
+    return this.myValue;
   }
 }
