@@ -2,8 +2,7 @@
   <div class="container">
     <h1 class="title">Step 1</h1>
     <h2 class="subtitle">
-      A simple container to divide your page into
-      <strong>sections</strong>, like the one you're currently reading
+      Please fill out basic details
     </h2>
   </div>
 </section>
@@ -11,7 +10,7 @@
 <section class="section">
   <div class="container">
     <h1>Hero Form</h1>
-    <form #heroForm="ngForm">
+    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
 
       <div class="field">
         <label for="name">Name</label>
@@ -35,6 +34,13 @@
       </div>
 
       <button type="submit" class="button is-success">Submit</button>
+
+<!-- <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button> -->
+
+
+<div>
+  {{diagnostic}}
+</div>
 
     </form>
   </div>
