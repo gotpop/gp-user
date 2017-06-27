@@ -8,6 +8,6 @@ https://gp-user.herokuapp.com
 
 ## Tools
 
-https://angular.io/
+https://angular.io
 
 http://bulma.io
