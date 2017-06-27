@@ -1,28 +1,27 @@
 <nav class="nav has-shadow">
   <div class="container">
     <div class="nav-left">
-      <!-- <router-link to="/" class="nav-item nav-item-logo is-tab is-hidden-mobile">
+      <a class="nav-item nav-item-logo is-tab is-hidden-mobile" routerLink="" routerLinkActive="is-active">
         <span class="icon">
           <i class="fa fa-fire"></i>
         </span>
         <span>GotPop Members</span>
-      </router-link> -->
-      <!-- <router-link v-if="validPages.step1" to="/step1" class="nav-item is-tab is-hidden-mobile">Step 1</router-link>
-      <router-link v-if="validPages.step2" to="/step2" class="nav-item is-tab is-hidden-mobile">Step 2</router-link>
-      <router-link v-if="validPages.step3" to="/step3" class="nav-item is-tab is-hidden-mobile">Step 3</router-link>
-      <router-link v-if="validPages.page3" to="/summary" class="nav-item is-tab is-hidden-mobile">Summary</router-link> -->
+      </a>
+      <a class="nav-item is-tab is-hidden-mobile" routerLink="/step1" routerLinkActive="is-active">Step 1</a>
+      <a class="nav-item is-tab is-hidden-mobile" routerLink="/step2" routerLinkActive="is-active">Step 2</a>
+      <a class="nav-item is-tab is-hidden-mobile" routerLink="/step3" routerLinkActive="is-active">Step 3</a>
+      <a class="nav-item is-tab is-hidden-mobile" routerLink="/summary" routerLinkActive="is-active">Summary</a>
     </div>
-    <span v-on:click="toggleOpen = !toggleOpen" class="nav-toggle">
+    <span class="nav-toggle">
       <span></span>
     <span></span>
     <span></span>
     </span>
     <div class="nav-right nav-menu">
-      <!-- <router-link to="/" class="nav-item is-tab is-hidden-tablet is-active">Home</router-link>
-      <router-link to="/step1" class="nav-item is-tab is-hidden-tablet">Step 1</router-link>
-      <router-link to="/step2" class="nav-item is-tab is-hidden-tablet">Step 2</router-link>
-      <router-link to="/step3" class="nav-item is-tab is-hidden-tablet">Step 3</router-link>
-      <router-link to="/summary" class="nav-item is-tab is-hidden-tablet">Summary</router-link> -->
+      <a class="nav-item is-tab is-hidden-tablet" routerLink="/step1" routerLinkActive="is-active">Step 1</a>
+      <a class="nav-item is-tab is-hidden-tablet" routerLink="/step2" routerLinkActive="is-active">Step 2</a>
+      <a class="nav-item is-tab is-hidden-tablet" routerLink="/step3" routerLinkActive="is-active">Step 3</a>
+      <a class="nav-item is-tab is-hidden-tablet" routerLink="/summary" routerLinkActive="is-active">Summary</a>
       <a href="https://github.com/gotpop/gp-user" class="nav-item nav-item-github is-tab">
         <div>View project on GitHub</div>
         <span class="icon">
