@@ -9,6 +9,7 @@ import { Step1Component } from './step1/step1.component';
 import { Step2Component } from './step2/step2.component';
 import { Step3Component } from './step3/step3.component';
 import { SummaryComponent } from './summary/summary.component';
+import { CollectableService } from './shared/collectable.service'
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -33,7 +34,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     BrowserModule
   ],
-  providers: [],
+  providers: [CollectableService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

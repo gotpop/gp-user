@@ -5,4 +5,8 @@ export class CollectableService {
     { description: 'Lorem ipsum dolor sit amet, consectetur', type: 'book' },
     { description: 'Lorem ipsum dolor sit amet, consectetur', type: 'book' }
   ]
+
+  getCollectables () {
+    return this.collectables;
+  }
 }

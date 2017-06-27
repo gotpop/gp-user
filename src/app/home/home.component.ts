@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CollectableService } from '../shared/collectable.service'
 
 @Component({
   selector: 'app-home',
@@ -6,13 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   title = 'GotPop User';
-  collectables = [
-    { description: 'Lorem ipsum dolor sit amet, consectetur', type: 'book' },
-    { description: 'Lorem ipsum dolor sit amet, consectetur', type: 'book' }
-  ]
-  constructor() { }
+  collectables = []
+  constructor(private CollectableService:CollectableService) { }
 
   ngOnInit() {
+    this.collectables = this.CollectableService.getCollectables();
   }
 
 }
