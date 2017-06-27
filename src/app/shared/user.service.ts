@@ -6,4 +6,8 @@ export class UserService {
   getUser () {
     return this.myUser;
   }
+
+  logIt() {
+    console.log('Check it out!')
+  }
 }

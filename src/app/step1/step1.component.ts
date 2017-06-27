@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { User }    from '../shared/user.model';
+import { User } from '../shared/user.model';
+import { UserService } from '../shared/user.service'
 
 @Component({
   selector: 'app-step1',
@@ -30,7 +31,11 @@ export class Step1Component implements OnInit {
 
 
 
-  constructor() { }
+  constructor(private logger: UserService) { }
+
+  clickIt() {
+    this.logger.logIt()
+  }
 
   ngOnInit() {
   }
