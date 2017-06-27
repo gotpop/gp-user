@@ -12,7 +12,10 @@ import { SummaryComponent } from './summary/summary.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'step1',      component: Step1Component }
+  { path: 'step1', component: Step1Component },
+  { path: 'step2', component: Step2Component },
+  { path: 'step3', component: Step3Component },
+  { path: 'summary', component: SummaryComponent }
 ];
 
 @NgModule({
