@@ -6,6 +6,7 @@ import { Status } from './status.model';
 export class UserService {
   private userStore;
   private statusStore;
+  private serverStore;
 
   constructor() { }
 
@@ -31,5 +32,13 @@ export class UserService {
 
   getStatusValue() {
     return this.statusStore;
+  }
+
+  setServerValue(val) {
+    this.serverStore = val;
+  }
+
+  getServerValue() {
+    return this.serverStore;
   }
 }

@@ -14,6 +14,7 @@ export class Step3Component implements OnInit {
   status = this.userStore.getStatusValue()
   model = this.userStore.getUserValue()
 
+
   makePost() {
     let sendObject = JSON.stringify(this.model)
     fetch("api/user", {
@@ -28,6 +29,8 @@ export class Step3Component implements OnInit {
       let parseString = JSON.parse(text)
 
       console.log('maString: ', parseString)
+
+      this.userStore.setServerValue(parseString)
 
       // this.serverUserObject.address1 = parseString.address1
       // this.serverUserObject.address2 = parseString.address2
