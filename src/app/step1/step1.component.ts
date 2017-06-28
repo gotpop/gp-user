@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../shared/user.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-step1',
@@ -8,7 +9,7 @@ import { UserService } from '../shared/user.service'
 
 export class Step1Component implements OnInit {
 
-  constructor(private userStore: UserService) { }
+  constructor(private userStore: UserService, private router: Router) { }
 
   powers = ['Really Smart', 'Super Flexible', 'Super Hot', 'Weather Changer'];
   status = this.userStore.getStatusValue()
@@ -27,6 +28,8 @@ export class Step1Component implements OnInit {
 
     console.log('Get user value: ', this.userStore.getUserValue())
     console.log('Get status value: ', this.userStore.getStatusValue())
+
+    this.router.navigate(['/step2']);
 
   }
 
