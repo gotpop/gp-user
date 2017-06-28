@@ -39,6 +39,7 @@ export class Step3Component implements OnInit {
       // this.serverUserObject.name = parseString.name
       // this.serverUserObject.postcode = parseString.postcode
       // this.serverUserObject.surname = parseString.surname
+      this.router.navigate(['/summary']);
     }
 
     console.log("Posted!")
@@ -55,7 +56,6 @@ export class Step3Component implements OnInit {
 
     this.makePost()
 
-    this.router.navigate(['/summary']);
   }
 
   ngOnInit() {
