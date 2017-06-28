@@ -14,6 +14,7 @@ import { SummaryComponent } from './summary/summary.component';
 
 import { UserService } from './shared/user.service'
 
+import { HttpModule, JsonpModule } from '@angular/http';
 
 
 const appRoutes: Routes = [
