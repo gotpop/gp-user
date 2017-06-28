@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../shared/user.service'
-import { StatusService } from '../shared/status.service'
+
 
 @Component({
   selector: 'app-step3',
@@ -8,21 +8,19 @@ import { StatusService } from '../shared/status.service'
 })
 export class Step3Component implements OnInit {
 
-  submitted = false;
-
-
-  get diagnostic() { return JSON.stringify(this.model); }
-
-
   constructor(private userStore: UserService) { }
 
-  model = this.userStore.getValue()
+  status = this.userStore.getStatusValue()
+  model = this.userStore.getUserValue()
 
   onSubmit() {
-    this.submitted = true;
-    this.userStore.setValue(this.model)
-    let checkit = this.userStore.getValue()
-    console.log(checkit)
+    this.status.step3 = true
+
+    this.userStore.setUserValue(this.model)
+    this.userStore.setStatusValue(this.status)
+
+    console.log('Get user value: ', this.userStore.getUserValue())
+    console.log('Get status value: ', this.userStore.getStatusValue())
   }
 
   ngOnInit() {

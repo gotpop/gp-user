@@ -1,23 +1,35 @@
 import {Injectable} from "@angular/core";
 import { User } from './user.model';
+import { Status } from './status.model';
 
 @Injectable()
 export class UserService {
-  private myValue;
+  private userStore;
+  private statusStore;
 
   constructor() { }
 
-  makeModel() {
+  makeUserModel() {
     return new User('', '', '','', '', '','', '', '');
   }
 
-  setValue(val) {
-    console.log(this.myValue);
-    this.myValue = val;
+  makeStatusModel() {
+    return new Status(false, false, false, false);
   }
 
-  getValue() {
-    console.log(this.myValue);
-    return this.myValue;
+  setUserValue(val) {
+    this.userStore = val;
+  }
+
+  getUserValue() {
+    return this.userStore;
+  }
+
+  setStatusValue(val) {
+    this.statusStore = val;
+  }
+
+  getStatusValue() {
+    return this.statusStore;
   }
 }

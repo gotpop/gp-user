@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../shared/user.service'
-import { StatusService } from '../shared/status.service'
 
 @Component({
   selector: 'app-step1',
@@ -9,7 +8,6 @@ import { StatusService } from '../shared/status.service'
 
 export class Step1Component implements OnInit {
 
-  submitted = false;
   powers = ['Really Smart', 'Super Flexible',
     'Super Hot', 'Weather Changer'];
 
@@ -18,13 +16,21 @@ export class Step1Component implements OnInit {
 
   constructor(private userStore: UserService) { }
 
-  model = this.userStore.makeModel()
+  status = this.userStore.makeStatusModel()
+  model = this.userStore.makeUserModel()
+
+
 
   onSubmit() {
-    this.submitted = true;
-    this.userStore.setValue(this.model)
-    let checkit = this.userStore.getValue()
-    console.log(checkit)
+
+    this.status.step1 = true
+    
+    this.userStore.setUserValue(this.model)
+    this.userStore.setStatusValue(this.status)
+
+    console.log('Get user value: ', this.userStore.getUserValue())
+    console.log('Get status value: ', this.userStore.getStatusValue())
+
   }
 
   ngOnInit() {
