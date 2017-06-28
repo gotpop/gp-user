@@ -29,7 +29,7 @@
          <input type="number" class="input" id="pref3" [(ngModel)]="model.pref3" name="pref3">
        </div>
 
-       <button type="submit" class="button is-success">Submit</button>
+      <button class="button is-success" type="submit" [disabled]="!heroForm.form.valid">Submit</button>
 
      </form>
    </div>

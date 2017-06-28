@@ -32,7 +32,7 @@
         </p>
       </div>
 
-      <button type="submit" class="button is-success">Submit</button>
+      <button class="button is-success" type="submit" [disabled]="!heroForm.form.valid">Submit</button>
 
     </form>
   </div>
