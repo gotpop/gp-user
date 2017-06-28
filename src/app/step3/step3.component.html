@@ -9,3 +9,40 @@
      </h2>
    </div>
  </section>
+
+ <section class="section">
+   <div class="container">
+     <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+
+       <div class="field">
+         <label for="name">Name</label>
+         <input type="text" class="input" id="name" required [(ngModel)]="model.name" name="name">
+       </div>
+
+       <div class="field">
+         <label for="alterEgo">Alter Ego</label>
+         <input type="text" class="input" id="alterEgo" [(ngModel)]="model.alterEgo" name="alterEgo">
+       </div>
+
+       <div class="field">
+         <label for="power">Hero Power</label>
+         <p class="control">
+           <span class="select">
+             <select id="powers" required [(ngModel)]="model.power" name="power">
+               <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+             </select>
+           </span>
+         </p>
+       </div>
+
+       <button type="submit" class="button is-success">Submit</button>
+
+     </form>
+   </div>
+ </section>
+
+ <section class="section">
+   <div class="container">
+       <div>{{diagnostic}}</div>
+   </div>
+ </section>
