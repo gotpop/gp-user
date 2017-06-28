@@ -12,6 +12,7 @@ export class SummaryComponent implements OnInit {
   serverStore = this.userStore.getServerValue()
 
   ngOnInit() {
+    console.log('Ma server store', this.serverStore)
   }
 
 }
