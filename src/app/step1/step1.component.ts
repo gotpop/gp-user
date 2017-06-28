@@ -8,23 +8,20 @@ import { UserService } from '../shared/user.service'
 
 export class Step1Component implements OnInit {
 
-  powers = ['Really Smart', 'Super Flexible',
-    'Super Hot', 'Weather Changer'];
-
-  get diagnostic() { return JSON.stringify(this.model); }
-
-
   constructor(private userStore: UserService) { }
 
-  status = this.userStore.makeStatusModel()
-  model = this.userStore.makeUserModel()
+  powers = ['Really Smart', 'Super Flexible', 'Super Hot', 'Weather Changer'];
+  status = this.userStore.getStatusValue()
+  model = this.userStore.getUserValue()
 
-
+  get diagnostic() {
+    return JSON.stringify(this.model);
+  }
 
   onSubmit() {
 
     this.status.step1 = true
-    
+
     this.userStore.setUserValue(this.model)
     this.userStore.setStatusValue(this.status)
 
@@ -34,6 +31,10 @@ export class Step1Component implements OnInit {
   }
 
   ngOnInit() {
+    if (this.status === undefined) {
+      this.status = this.userStore.makeStatusModel()
+      this.model = this.userStore.makeUserModel()
+    }
   }
 
 }
