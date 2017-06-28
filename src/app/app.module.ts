@@ -15,6 +15,7 @@ import { SummaryComponent } from './summary/summary.component';
 import { UserService } from './shared/user.service'
 
 import { HttpModule, JsonpModule } from '@angular/http';
+import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 
 
 const appRoutes: Routes = [
@@ -34,7 +35,8 @@ const appRoutes: Routes = [
     Step1Component,
     Step2Component,
     Step3Component,
-    SummaryComponent
+    SummaryComponent,
+    BreadcrumbsComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
