@@ -1,48 +1,43 @@
 <section class="section">
-   <div class="container">
-     <h1 class="title">Section</h1>
-     <h2 class="subtitle">
-       <p>
-         step2 works!
-       </p>
-       A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
-     </h2>
-   </div>
- </section>
+  <div class="container">
+    <h1 class="title">Section</h1>
+    <h2 class="subtitle">
+      <p>
+        step2 works!
+      </p>
+      A simple container to divide your page into
+      <strong>sections</strong>, like the one you're currently reading
+    </h2>
+  </div>
+</section>
 
- <section class="section">
-   <div class="container">
-     <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+<section class="section">
+  <div class="container">
+    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
 
-       <div class="field">
-         <label for="name">Name</label>
-         <input type="text" class="input" id="name" required [(ngModel)]="model.name" name="name">
-       </div>
+      <div class="field">
+        <label for="address1">Name</label>
+        <input type="text" class="input" id="address1" required [(ngModel)]="model.address1" name="address1">
+      </div>
 
-       <div class="field">
-         <label for="alterEgo">Alter Ego</label>
-         <input type="text" class="input" id="alterEgo" [(ngModel)]="model.alterEgo" name="alterEgo">
-       </div>
+      <div class="field">
+        <label for="address2">Alter Ego</label>
+        <input type="text" class="input" id="address2" [(ngModel)]="model.address2" name="address2">
+      </div>
 
-       <div class="field">
-         <label for="power">Hero Power</label>
-         <p class="control">
-           <span class="select">
-             <select id="powers" required [(ngModel)]="model.power" name="power">
-               <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
-             </select>
-           </span>
-         </p>
-       </div>
+      <div class="field">
+        <label for="phone">Telephone</label>
+        <input type="number" class="input" id="phone" [(ngModel)]="model.phone" name="phone">
+      </div>
 
-       <button type="submit" class="button is-success">Submit</button>
+      <button type="submit" class="button is-success">Submit</button>
 
-     </form>
-   </div>
- </section>
+    </form>
+  </div>
+</section>
 
- <section class="section">
-   <div class="container">
-       <div>{{diagnostic}}</div>
-   </div>
- </section>
+<section class="section">
+  <div class="container">
+    <div>{{diagnostic}}</div>
+  </div>
+</section>
