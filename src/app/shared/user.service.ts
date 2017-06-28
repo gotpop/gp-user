@@ -8,7 +8,7 @@ export class UserService {
   constructor() { }
 
   makeModel() {
-    return new User('', '', '');
+    return new User('', '', '','', '', '','', '', '');
   }
 
   setValue(val) {

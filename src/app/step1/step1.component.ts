@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../shared/user.service'
+import { StatusService } from '../shared/status.service'
 
 @Component({
   selector: 'app-step1',
