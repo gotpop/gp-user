@@ -8,10 +8,10 @@ import { UserService } from '../shared/user.service'
 export class SummaryComponent implements OnInit {
 
   constructor(private userStore: UserService) { }
-
-  serverStore = this.userStore.getServerValue()
+  serverStore
 
   ngOnInit() {
+    this.serverStore = this.userStore.getServerValue()
     console.log('Ma server store', this.serverStore)
   }
 
