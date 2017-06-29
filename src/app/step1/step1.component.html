@@ -18,15 +18,15 @@
 
       <div class="field">
         <label for="surname">Surname</label>
-        <input type="text" class="input" id="surname" [(ngModel)]="model.surname" name="surname">
+        <input type="text" class="input" id="surname" [(ngModel)]="model.surname" name="surname" required>
       </div>
 
       <div class="field">
-        <label for="power">Hero Power</label>
+        <label for="genders">Gender</label>
         <p class="control">
           <span class="select">
-            <select id="powers" required [(ngModel)]="model.power" name="power">
-              <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+            <select id="genders" [(ngModel)]="model.gender" name="gender" required>
+              <option *ngFor="let gender of genders" [value]="gender">{{gender}}</option>
             </select>
           </span>
         </p>

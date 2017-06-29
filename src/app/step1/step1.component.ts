@@ -11,7 +11,7 @@ export class Step1Component implements OnInit {
 
   constructor(private userStore: UserService, private router: Router) { }
 
-  powers = ['Really Smart', 'Super Flexible', 'Super Hot', 'Weather Changer'];
+  genders = ['Male', 'Female'];
   status = this.userStore.getStatusValue()
   model = this.userStore.getUserValue()
 

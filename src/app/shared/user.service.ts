@@ -15,7 +15,7 @@ export class UserService {
   }
 
   makeStatusModel() {
-    return new Status(false, false, false, false);
+    return new Status(true, false, false, false, false);
   }
 
   setUserValue(val) {

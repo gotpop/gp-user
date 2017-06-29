@@ -13,7 +13,7 @@ export class BreadcrumbsComponent implements OnInit {
   status = this.userStore.getStatusValue()
 
   ngOnInit() {
-    console.log('status: ', status)
+    console.log('status: ', this.userStore.getStatusValue())
   }
 
 }
