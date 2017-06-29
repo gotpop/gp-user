@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../shared/user.service'
 
 @Component({
-  selector: 'app-summary',
+  selector: '[app-summary]',
   templateUrl: './summary.component.html'
 })
 export class SummaryComponent implements OnInit {

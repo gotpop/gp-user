@@ -3,7 +3,7 @@ import { UserService } from '../shared/user.service'
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-step2',
+  selector: '[app-step2]',
   templateUrl: './step2.component.html'
 })
 export class Step2Component implements OnInit {

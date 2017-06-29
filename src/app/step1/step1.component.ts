@@ -3,7 +3,7 @@ import { UserService } from '../shared/user.service'
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-step1',
+  selector: '[app-step1]',
   templateUrl: './step1.component.html'
 })
 
