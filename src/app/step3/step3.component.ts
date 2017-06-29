@@ -32,13 +32,6 @@ export class Step3Component implements OnInit {
 
       this.userStore.setServerValue(parseString)
 
-      // this.serverUserObject.address1 = parseString.address1
-      // this.serverUserObject.address2 = parseString.address2
-      // this.serverUserObject.email = parseString.email
-      // this.serverUserObject.list = parseString.list
-      // this.serverUserObject.name = parseString.name
-      // this.serverUserObject.postcode = parseString.postcode
-      // this.serverUserObject.surname = parseString.surname
       this.router.navigate(['/summary']);
     }
 
