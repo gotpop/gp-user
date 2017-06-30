@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private userStore: UserService) { }
 
-  home = true
+  // home = true
 
   ngOnInit() {
 

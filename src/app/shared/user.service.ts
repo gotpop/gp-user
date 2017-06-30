@@ -4,9 +4,9 @@ import { Status } from './status.model';
 
 @Injectable()
 export class UserService {
-  private userStore;
-  private statusStore;
-  private serverStore;
+  private userStore:object;
+  private statusStore:object;
+  private serverStore:object;
 
   constructor() { }
 
@@ -18,7 +18,7 @@ export class UserService {
     return new Status(true, false, false, false, false);
   }
 
-  setUserValue(val) {
+  setUserValue(val:object) {
     this.userStore = val;
   }
 
@@ -26,15 +26,24 @@ export class UserService {
     return this.userStore;
   }
 
-  setStatusValue(val) {
+
+
+
+  setStatusValue(val:object) {
+    console.log('set', this.statusStore)
     this.statusStore = val;
   }
 
   getStatusValue() {
+    console.log('get', this.statusStore)
     return this.statusStore;
   }
 
-  setServerValue(val) {
+
+
+
+
+  setServerValue(val:object) {
     this.serverStore = val;
   }
 
