@@ -12,44 +12,32 @@ export class Step1Component implements OnInit {
   constructor(private userStore: UserService, private router: Router) { }
 
   genders = ['Male', 'Female'];
-  status
+  status = this.userStore.getStatusValue()
   model = this.userStore.getUserValue()
 
+  get diagnostic() {
+    return JSON.stringify(this.model);
+  }
+
   onSubmit() {
+
+    this.status.step1 = true
+
     this.userStore.setUserValue(this.model)
+    this.userStore.setStatusValue(this.status)
 
-
-    // let newObject = {home: true, step1: true, step2: false, step3: false, summary: false}
-    //
-    // this.userStore.setStatusValue(newObject)
-
-    // this.userStore.setStatusValue(this.status)
-    //
-    //
-    // console.log('ma status:', this.status)
-    //
-    // console.log('Get status value: ', this.userStore.getStatusValue()  )
+    console.log('Get user value: ', this.userStore.getUserValue())
+    console.log('Get status value: ', this.userStore.getStatusValue())
 
     this.router.navigate(['/step2']);
 
   }
 
   ngOnInit() {
-
-
-
     if (this.status === undefined) {
-      // this.status = this.userStore.makeStatusModel()
-
-
+      this.status = this.userStore.makeStatusModel()
       this.model = this.userStore.makeUserModel()
     }
-
-    // console.log('ma status2:', this.status)
-    // this.status.step1 = true
-    this.status = this.userStore.getStatusValue()
-        // console.log('ma status3:', this.status)
-
   }
 
 }

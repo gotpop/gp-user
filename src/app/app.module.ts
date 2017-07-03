@@ -18,16 +18,6 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 
 
-
-import { StoreModule } from '@ngrx/store';
-import { counterReducer } from './store/counter';
-
-import { MyAppComponent } from './test'
-
-
-
-
-
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'step1', component: Step1Component },
@@ -46,14 +36,12 @@ const appRoutes: Routes = [
     Step2Component,
     Step3Component,
     SummaryComponent,
-    BreadcrumbsComponent,
-    MyAppComponent
+    BreadcrumbsComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
-    FormsModule,
-    StoreModule.provideStore({ counter: counterReducer })
+    FormsModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

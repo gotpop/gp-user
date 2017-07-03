@@ -11,15 +11,10 @@ export class HomeComponent implements OnInit {
 
   constructor(private userStore: UserService) { }
 
-  status = this.userStore.getStatusValue()
+  home = true
 
   ngOnInit() {
-    if (this.status === undefined) {
-      this.status = this.userStore.makeStatusModel()
-      console.log('Home status: ', this.status)
-      this.status = this.userStore.getStatusValue()
-      console.log('Home status: ', this.status)
-    }
+
   }
 
 }

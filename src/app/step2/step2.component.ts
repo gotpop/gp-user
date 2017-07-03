@@ -14,7 +14,7 @@ export class Step2Component implements OnInit {
   model = this.userStore.getUserValue()
 
   onSubmit() {
-    // this.status.step2 = true
+    this.status.step2 = true
 
     this.userStore.setUserValue(this.model)
     this.userStore.setStatusValue(this.status)

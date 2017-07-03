@@ -39,7 +39,7 @@ export class Step3Component implements OnInit {
   }
 
   onSubmit() {
-    // this.status.step3 = true
+    this.status.step3 = true
 
     this.userStore.setUserValue(this.model)
     this.userStore.setStatusValue(this.status)
