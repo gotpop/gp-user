@@ -24,6 +24,8 @@ import { MyAppComponent } from './test'
 import { pageReducer } from './store/page';
 import { MyPageComponent } from './testpage'
 
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -51,7 +53,10 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
     FormsModule,
-    StoreModule.provideStore({ counter: counterReducer, page: pageReducer })
+    StoreModule.provideStore({ counter: counterReducer, page: pageReducer }),
+    StoreDevtoolsModule.instrumentOnlyWithExtension({
+      maxAge: 5
+    })
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
