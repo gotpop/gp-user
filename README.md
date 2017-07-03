@@ -14,4 +14,6 @@ https://gp-user-staging.herokuapp.com
 
 https://angular.io
 
+https://github.com/ngrx/store
+
 http://bulma.io
