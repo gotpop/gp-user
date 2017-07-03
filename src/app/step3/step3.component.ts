@@ -30,7 +30,7 @@ export class Step3Component implements OnInit {
       home: true,
       step1: true,
       step2: true,
-      step3: false,
+      step3: true,
       summary: false
     } });
   }

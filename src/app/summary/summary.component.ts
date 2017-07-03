@@ -30,8 +30,8 @@ export class SummaryComponent implements OnInit {
       home: true,
       step1: true,
       step2: true,
-      step3: false,
-      summary: false
+      step3: true,
+      summary: true
     } });
   }
 
