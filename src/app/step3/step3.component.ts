@@ -21,18 +21,20 @@ export class Step3Component implements OnInit {
   public page
   model = this.userStore.getUserValue()
 
-  getPage(){
+  getPage() {
     this.store.dispatch({ type: GETPAGE });
   }
 
-  setPage(){
-    this.store.dispatch({ type: "SETPAGE", payload: {
-      home: true,
-      step1: true,
-      step2: true,
-      step3: true,
-      summary: false
-    } });
+  setPage() {
+    this.store.dispatch({
+      type: "SETPAGE", payload: {
+        home: true,
+        step1: true,
+        step2: true,
+        step3: true,
+        summary: false
+      }
+    });
   }
 
   makePost() {
@@ -59,6 +61,8 @@ export class Step3Component implements OnInit {
   }
 
   onSubmit() {
+
+    this.setPage()
 
     this.userStore.setUserValue(this.model)
     console.log('Get user value: ', this.userStore.getUserValue())
