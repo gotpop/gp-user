@@ -1,24 +1,29 @@
 <nav class="breadcrumb is-centered">
-    <ul>
-      <li ><a class="nav-item is-tab is-hidden-mobile" routerLink="/step1" routerLinkActive="is-active">Step 1</a></li>
-      <li><a class="nav-item is-tab is-hidden-mobile" routerLink="/step2" routerLinkActive="is-active">Step 2</a></li>
-      <li><a class="nav-item is-tab is-hidden-mobile" routerLink="/step3" routerLinkActive="is-active">Step 3</a></li>
-      <li><a class="nav-item is-tab is-hidden-mobile" routerLink="/summary" routerLinkActive="is-active">Summary</a></li>
-    </ul>
+  <ul>
+    <li >
+      <a class="nav-item is-tab is-hidden-mobile" routerLink="/step1" routerLinkActive="is-active">Step 1</a>
+    </li>
+    <li>
+      <a class="nav-item is-tab is-hidden-mobile" routerLink="/step2" routerLinkActive="is-active">Step 2</a>
+    </li>
+    <li>
+      <a class="nav-item is-tab is-hidden-mobile" routerLink="/step3" routerLinkActive="is-active">Step 3</a>
+    </li>
+    <li>
+      <a class="nav-item is-tab is-hidden-mobile" routerLink="/summary" routerLinkActive="is-active">Summary</a>
+    </li>
+  </ul>
 </nav>
-<h1 class="title">{{page.step1}}</h1>
 <section class="section">
   <div class="container">
-<h1 class="title">{{page.step1}}</h1>
-   <h1 class="title">This is a test page</h1>
-    <button class="button is-warning is-large" (click)="getPage()">Increment</button>
-    <div>{{ page.greet }}</div>
-    <div>{{ page.home }}</div>
-    <div>{{ page.step1 }}</div>
-    <div>{{ page.step2 }}</div>
-    <div>{{ page.step3 }}</div>
-    <div>{{ page.summary }}</div>
-    <button class="button is-warning is-large" (click)="setPage()">Decrement</button>
-
+    <h4 class="title">Page is: {{page.step1}}</h4>
+    <div class="columns">
+      <div class="column">
+        <button class="button is-warning is-small" (click)="getPage()">Get page value</button>
+      </div>
+      <div class="column">
+        <button class="button is-warning is-small" (click)="setPage()">Set page value</button>
+      </div>
+    </div>
   </div>
 </section>
