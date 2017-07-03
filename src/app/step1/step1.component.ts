@@ -19,6 +19,10 @@ export class Step1Component implements OnInit {
     this.userStore.setUserValue(this.model)
 
 
+    let newObject = {home: true, step1: true, step2: false, step3: false, summary: false}
+
+    this.userStore.setStatusValue(newObject)
+
     // this.userStore.setStatusValue(this.status)
     //
     //
@@ -37,9 +41,6 @@ export class Step1Component implements OnInit {
     if (this.status === undefined) {
       this.status = this.userStore.makeStatusModel()
 
-      let newObject = {home: true, step1: false, step2: false, step3: false, summary: false}
-
-      this.userStore.setStatusValue(newObject)
 
       this.model = this.userStore.makeUserModel()
     }

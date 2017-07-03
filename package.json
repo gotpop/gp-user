@@ -27,6 +27,8 @@
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.2.4",
+    "@ngrx/core": "^1.2.0",
+    "@ngrx/store": "^2.2.2",
     "@types/jasmine": "2.5.45",
     "@types/node": "~6.0.60",
     "bulma": "^0.4.2",
