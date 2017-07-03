@@ -11,9 +11,9 @@ export class Step1Component implements OnInit {
 
   constructor(private userStore: UserService, private router: Router) { }
 
-  private genders = ['Male', 'Female'];
-  private status:object
-  private model:object = this.userStore.getUserValue()
+  public genders = ['Male', 'Female'];
+  public status:object
+  public model:object = this.userStore.getUserValue()
 
   onSubmit() {
     this.userStore.setUserValue(this.model)
