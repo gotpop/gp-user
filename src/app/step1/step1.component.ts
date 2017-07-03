@@ -11,17 +11,17 @@ export class Step1Component implements OnInit {
 
   constructor(private userStore: UserService, private router: Router) { }
 
-  public genders = ['Male', 'Female'];
-  public status:object
-  public model:object = this.userStore.getUserValue()
+  genders = ['Male', 'Female'];
+  status
+  model = this.userStore.getUserValue()
 
   onSubmit() {
     this.userStore.setUserValue(this.model)
 
 
-    let newObject = {home: true, step1: true, step2: false, step3: false, summary: false}
-
-    this.userStore.setStatusValue(newObject)
+    // let newObject = {home: true, step1: true, step2: false, step3: false, summary: false}
+    //
+    // this.userStore.setStatusValue(newObject)
 
     // this.userStore.setStatusValue(this.status)
     //
@@ -39,16 +39,16 @@ export class Step1Component implements OnInit {
 
 
     if (this.status === undefined) {
-      this.status = this.userStore.makeStatusModel()
+      // this.status = this.userStore.makeStatusModel()
 
 
       this.model = this.userStore.makeUserModel()
     }
 
-    console.log('ma status2:', this.status)
+    // console.log('ma status2:', this.status)
     // this.status.step1 = true
     this.status = this.userStore.getStatusValue()
-        console.log('ma status3:', this.status)
+        // console.log('ma status3:', this.status)
 
   }
 
