@@ -17,6 +17,10 @@ import { UserService } from './shared/user.service'
 import { HttpModule, JsonpModule } from '@angular/http';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './store/counter';
+import { MyAppComponent } from './test'
+
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -36,12 +40,14 @@ const appRoutes: Routes = [
     Step2Component,
     Step3Component,
     SummaryComponent,
-    BreadcrumbsComponent
+    BreadcrumbsComponent,
+    MyAppComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
-    FormsModule
+    FormsModule,
+    StoreModule.provideStore({ counter: counterReducer })
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
