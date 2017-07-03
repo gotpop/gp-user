@@ -37,6 +37,9 @@ export class Step1Component implements OnInit {
   }
 
   onSubmit() {
+
+    this.setPage()
+
     this.userStore.setUserValue(this.model)
     console.log('Get user value: ', this.userStore.getUserValue())
     this.router.navigate(['/step2']);
