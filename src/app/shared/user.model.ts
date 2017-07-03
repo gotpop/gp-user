@@ -1,15 +1,15 @@
 export class User {
 
   constructor(
-    public name: string,
-    public gender: string,
-    public surname: string,
-    public address1: string,
-    public address2: string,
-    public phone: string,
-    public pref1: string,
-    public pref2: string,
-    public pref3: string
+    public name,
+    public gender,
+    public surname,
+    public address1,
+    public address2,
+    public phone,
+    public pref1,
+    public pref2,
+    public pref3
   ) {  }
 
 }
