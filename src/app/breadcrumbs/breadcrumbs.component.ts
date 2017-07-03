@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../shared/user.service'
+import { Observable, Observer } from 'rxjs/Rx';
+import { Store } from '@ngrx/store';
+import { GETPAGE, SETPAGE } from '../store/page';
 
 @Component({
   selector: 'app-breadcrumbs',
@@ -8,12 +10,16 @@ import { UserService } from '../shared/user.service'
 })
 export class BreadcrumbsComponent implements OnInit {
 
-  constructor(private userStore: UserService) { }
+  constructor(private store: Store<any>) {
+    store.select('page').subscribe(page => {
+      this.page = page
+    })
+  }
 
-  status = this.userStore.getStatusValue()
+  public page
 
   ngOnInit() {
-    console.log('status: ', this.userStore.getStatusValue())
+
   }
 
 }

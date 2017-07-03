@@ -11,19 +11,21 @@ export function pageReducer(state = {}, action: Action) {
     case GETPAGE: {
 			console.log('Get page fired');
       return state = {
-        greet: "10"
+        home: true,
+        step1: false,
+        step2: false,
+        step3: false,
+        summary: false
       }
     }
     case SETPAGE: {
       console.log('Set page state: ', state);
 			console.log('Set page payload: ', action.payload);
       return state = action.payload
-			// return state = true
     }
     default: {
       return state;
     }
-
 
   }
 }

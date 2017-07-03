@@ -38,5 +38,18 @@
   </div>
 </section>
 
-<app-test></app-test>
-<app-test-page></app-test-page>
+<section class="section">
+  <div class="container">
+<h1 class="title">{{page.step1}}</h1>
+   <h1 class="title">This is a test page</h1>
+    <button class="button is-warning is-large" (click)="getPage()">Increment</button>
+    <div>{{ page.greet }}</div>
+    <div>{{ page.home }}</div>
+    <div>{{ page.step1 }}</div>
+    <div>{{ page.step2 }}</div>
+    <div>{{ page.step3 }}</div>
+    <div>{{ page.summary }}</div>
+    <button class="button is-warning is-large" (click)="setPage()">Decrement</button>
+
+  </div>
+</section>

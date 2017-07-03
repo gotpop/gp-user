@@ -18,12 +18,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 
 import { StoreModule } from '@ngrx/store';
-import { counterReducer } from './store/counter';
-import { MyAppComponent } from './test'
-
 import { pageReducer } from './store/page';
-import { MyPageComponent } from './testpage'
-
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 
@@ -45,15 +40,13 @@ const appRoutes: Routes = [
     Step2Component,
     Step3Component,
     SummaryComponent,
-    BreadcrumbsComponent,
-    MyAppComponent,
-    MyPageComponent
+    BreadcrumbsComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
     FormsModule,
-    StoreModule.provideStore({ counter: counterReducer, page: pageReducer }),
+    StoreModule.provideStore({ page: pageReducer }),
     StoreDevtoolsModule.instrumentOnlyWithExtension({
       maxAge: 5
     })
