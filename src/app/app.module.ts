@@ -21,6 +21,9 @@ import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './store/counter';
 import { MyAppComponent } from './test'
 
+import { pageReducer } from './store/page';
+import { MyPageComponent } from './testpage'
+
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -41,13 +44,14 @@ const appRoutes: Routes = [
     Step3Component,
     SummaryComponent,
     BreadcrumbsComponent,
-    MyAppComponent
+    MyAppComponent,
+    MyPageComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
     FormsModule,
-    StoreModule.provideStore({ counter: counterReducer })
+    StoreModule.provideStore({ counter: counterReducer, page: pageReducer })
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
