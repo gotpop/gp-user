@@ -18,6 +18,20 @@ export class BreadcrumbsComponent implements OnInit {
 
   public page
 
+  getPage(){
+    this.store.dispatch({ type: GETPAGE });
+  }
+
+  setPage(){
+    this.store.dispatch({ type: "SETPAGE", payload: {
+      home: true,
+      step1: true,
+      step2: false,
+      step3: false,
+      summary: false
+    } });
+  }
+
   ngOnInit() {
 
   }
