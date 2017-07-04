@@ -21,12 +21,8 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  onJoin() {
-  }
-
   ngOnInit() {
-    this.userStore.makeUserModel()
-    // this.model = this.userStore.makeUserModel()
+
   }
 
 }

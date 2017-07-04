@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable, Observer } from 'rxjs/Rx';
-import { Store } from '@ngrx/store';
-import { GETPAGE, SETPAGE } from '../store/page';
+import { Component, OnInit } from '@angular/core'
+import { Observable, Observer } from 'rxjs/Rx'
+import { Store } from '@ngrx/store'
+import { GETPAGE, SETPAGE } from '../store/page'
 
 @Component({
   selector: 'app-breadcrumbs',
@@ -10,27 +10,17 @@ import { GETPAGE, SETPAGE } from '../store/page';
 })
 export class BreadcrumbsComponent implements OnInit {
 
+  public page
+
   constructor(private store: Store<any>) {
     store.select('page').subscribe(page => {
       this.page = page
     })
   }
 
-  public page
-
-  getPage(){
-    this.store.dispatch({ type: GETPAGE });
+  getPage() {
+    this.store.dispatch({ type: GETPAGE })
   }
-
-  // setPage(){
-  //   this.store.dispatch({ type: "SETPAGE", payload: {
-  //     home: true,
-  //     step1: true,
-  //     step2: false,
-  //     step3: false,
-  //     summary: false
-  //   } });
-  // }
 
   ngOnInit() {
 

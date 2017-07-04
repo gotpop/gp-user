@@ -1,26 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { FormsModule }   from '@angular/forms';
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { RouterModule, Routes } from '@angular/router'
+import { FormsModule } from '@angular/forms'
+import { HttpModule, JsonpModule } from '@angular/http'
+import { StoreModule } from '@ngrx/store'
+import { StoreDevtoolsModule } from '@ngrx/store-devtools'
 
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { Step1Component } from './step1/step1.component';
-import { Step2Component } from './step2/step2.component';
-import { Step3Component } from './step3/step3.component';
-import { SummaryComponent } from './summary/summary.component';
+import { AppComponent } from './app.component'
+import { HomeComponent } from './home/home.component'
+import { HeaderComponent } from './header/header.component'
+import { FooterComponent } from './footer/footer.component'
+import { Step1Component } from './step1/step1.component'
+import { Step2Component } from './step2/step2.component'
+import { Step3Component } from './step3/step3.component'
+import { SummaryComponent } from './summary/summary.component'
+import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component'
 
 import { UserService } from './shared/user.service'
-
-import { HttpModule, JsonpModule } from '@angular/http';
-import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
-
-import { StoreModule } from '@ngrx/store';
-import { pageReducer } from './store/page';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-
+import { pageReducer } from './store/page'
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -28,7 +26,7 @@ const appRoutes: Routes = [
   { path: 'step2', component: Step2Component },
   { path: 'step3', component: Step3Component },
   { path: 'summary', component: SummaryComponent }
-];
+]
 
 @NgModule({
   declarations: [
