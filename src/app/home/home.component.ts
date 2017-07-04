@@ -11,7 +11,7 @@ import { UserService } from '../shared/user.service'
 
 export class HomeComponent implements OnInit {
 
-  private title = 'GotPop User'
+  public title = 'GotPop User'
   public model
   public page
 

@@ -13,7 +13,7 @@ import { GETPAGE, SETPAGE } from '../store/page'
 export class Step1Component implements OnInit {
 
   public page
-  private genders = ['Male', 'Female']
+  public genders = ['Male', 'Female']
   public model = this.userStore.getUserValue()
 
   constructor(private userStore: UserService, private router: Router, private store: Store<any>) {
