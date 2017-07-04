@@ -1,38 +1,39 @@
-<section class="section">
-  <div class="container">
-    <h1 class="title">Step 1</h1>
-    <h2 class="subtitle">
-      Please fill out basic details here.
-    </h2>
-  </div>
-</section>
-<section class="section">
-  <div class="form-wrap container">
-    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+<div class="site-wrap">
+  <section class="section">
+    <div class="container">
+      <h1 class="title">Step 1</h1>
+      <h2 class="subtitle">
+        Please fill out basic details here.
+      </h2>
+    </div>
+  </section>
+  <section class="section">
+    <div class="form-wrap container">
+      <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
 
-      <div class="field">
-        <label for="name">Name</label>
-        <input type="text" class="input" id="name" required [(ngModel)]="model.name" name="name" autofocus>
-      </div>
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" class="input" id="name" required [(ngModel)]="model.name" name="name" autofocus>
+        </div>
 
-      <div class="field">
-        <label for="surname">Surname</label>
-        <input type="text" class="input" id="surname" [(ngModel)]="model.surname" name="surname" required>
-      </div>
+        <div class="field">
+          <label for="surname">Surname</label>
+          <input type="text" class="input" id="surname" [(ngModel)]="model.surname" name="surname" required>
+        </div>
 
-      <div class="field">
-        <label for="genders">Gender</label>
-        <p class="control">
-          <span class="select">
-            <select id="genders" [(ngModel)]="model.gender" name="gender" required>
-              <option *ngFor="let gender of genders" [value]="gender">{{gender}}</option>
-            </select>
-          </span>
-        </p>
-      </div>
+        <div class="field">
+          <label for="genders">Gender</label>
+          <p class="control">
+            <span class="select">
+              <select id="genders" [(ngModel)]="model.gender" name="gender" required>
+                <option *ngFor="let gender of genders" [value]="gender">{{gender}}</option>
+              </select>
+            </span>
+          </p>
+        </div>
 
-      <button class="button is-success" type="submit" [disabled]="!heroForm.form.valid">Submit</button>
-
-    </form>
-  </div>
-</section>
+        <button class="button is-success" type="submit" [disabled]="!heroForm.form.valid">Submit</button>
+      </form>
+    </div>
+  </section>
+</div>

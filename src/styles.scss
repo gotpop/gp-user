@@ -4,6 +4,10 @@
 @import "~font-awesome/css/font-awesome.css";
 
 
+.site-wrap {
+  min-height: 100vh;
+}
+
 .ng-valid[required], .ng-valid.required  {
   border-left: 5px solid #42A948; /* green */
 }

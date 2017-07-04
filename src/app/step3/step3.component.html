@@ -1,33 +1,34 @@
-<section class="section">
-   <div class="container">
-     <h1 class="title">Step 3</h1>
-     <h2 class="subtitle">
-      Please fill out preferences here.
-     </h2>
-   </div>
- </section>
+<div class="site-wrap">
+  <section class="section">
+    <div class="container">
+      <h1 class="title">Step 3</h1>
+      <h2 class="subtitle">
+        Please fill out preferences here.
+      </h2>
+    </div>
+  </section>
 
- <section class="section">
-   <div class="form-wrap container">
-     <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+  <section class="section">
+    <div class="form-wrap container">
+      <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
 
-       <div class="field">
-         <label for="pref1">Pref 1</label>
-         <input type="text" class="input" id="pref1" required [(ngModel)]="model.pref1" name="pref1" required autofocus>
-       </div>
+        <div class="field">
+          <label for="pref1">Pref 1</label>
+          <input type="text" class="input" id="pref1" required [(ngModel)]="model.pref1" name="pref1" required autofocus>
+        </div>
 
-       <div class="field">
-         <label for="pref2">Pref 2</label>
-         <input type="text" class="input" id="pref2" [(ngModel)]="model.pref2" name="pref2" required>
-       </div>
+        <div class="field">
+          <label for="pref2">Pref 2</label>
+          <input type="text" class="input" id="pref2" [(ngModel)]="model.pref2" name="pref2" required>
+        </div>
 
-       <div class="field">
-         <label for="pref3">Pref 3</label>
-         <input type="number" class="input" id="pref3" [(ngModel)]="model.pref3" name="pref3" required>
-       </div>
+        <div class="field">
+          <label for="pref3">Pref 3</label>
+          <input type="number" class="input" id="pref3" [(ngModel)]="model.pref3" name="pref3" required>
+        </div>
 
-      <button class="button is-success" type="submit" [disabled]="!heroForm.form.valid">Submit</button>
-
-     </form>
-   </div>
- </section>
+        <button class="button is-success" type="submit" [disabled]="!heroForm.form.valid">Submit</button>
+      </form>
+    </div>
+  </section>
+</div>
