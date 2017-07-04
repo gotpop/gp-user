@@ -4,10 +4,13 @@ import { Store } from '@ngrx/store'
 import { Observable, Observer } from 'rxjs/Rx'
 import { UserService } from '../shared/user.service'
 import { GETPAGE, SETPAGE } from '../store/page'
+import { fadeInAnimation } from '../animations/fade'
 
 @Component({
   selector: '[app-step1]',
-  templateUrl: './step1.component.html'
+  templateUrl: './step1.component.html',
+  animations: [fadeInAnimation],
+  host: { '[@fadeInAnimation]': '' }
 })
 
 export class Step1Component implements OnInit {

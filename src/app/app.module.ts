@@ -43,6 +43,7 @@ const appRoutes: Routes = [
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     StoreModule.provideStore({ page: pageReducer }),
     StoreDevtoolsModule.instrumentOnlyWithExtension({
