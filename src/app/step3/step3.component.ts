@@ -1,10 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { Router } from '@angular/router'
+import { Store } from '@ngrx/store'
+import { Observable, Observer } from 'rxjs/Rx'
 import { UserService } from '../shared/user.service'
-import { Router } from '@angular/router';
-
-import { Observable, Observer } from 'rxjs/Rx';
-import { Store } from '@ngrx/store';
-import { GETPAGE, SETPAGE } from '../store/page';
+import { GETPAGE, SETPAGE } from '../store/page'
 
 @Component({
   selector: '[app-step3]',
@@ -12,17 +11,13 @@ import { GETPAGE, SETPAGE } from '../store/page';
 })
 export class Step3Component implements OnInit {
 
+  public page
+  public model = this.userStore.getUserValue()
+
   constructor(private userStore: UserService, private router: Router, private store: Store<any>) {
     store.select('page').subscribe(page => {
       this.page = page
     })
-  }
-
-  public page
-  model = this.userStore.getUserValue()
-
-  getPage() {
-    this.store.dispatch({ type: GETPAGE });
   }
 
   setPage() {
@@ -34,7 +29,7 @@ export class Step3Component implements OnInit {
         step3: true,
         summary: false
       }
-    });
+    })
   }
 
   makePost() {
@@ -43,34 +38,28 @@ export class Step3Component implements OnInit {
       method: "POST",
       body: sendObject
     }).then(doThis.bind(this))
+
     function doThis(response) {
-      return response.text().then(thenThis.bind(this));
+      return response.text().then(thenThis.bind(this))
     }
 
     function thenThis(text) {
       let parseString = JSON.parse(text)
-
-      console.log('maString: ', parseString)
-
+      console.log('Object from server: ', parseString)
       this.userStore.setServerValue(parseString)
-
-      this.router.navigate(['/summary']);
+      this.router.navigate(['/summary'])
     }
 
-    console.log("Posted!")
+    console.log("Posted to Express endpoint!")
   }
 
   onSubmit() {
-
-    this.setPage()
-
     this.userStore.setUserValue(this.model)
-    console.log('Get user value: ', this.userStore.getUserValue())
     this.makePost()
-
   }
 
   ngOnInit() {
+    this.setPage()
   }
 
 }

@@ -5,18 +5,14 @@ import { Status } from '../shared/status.model';
 export const GETPAGE = 'GETPAGE';
 export const SETPAGE = 'SETPAGE';
 
-export function pageReducer(state = {}, action: Action) {
+const INITVAR = new Status(true, false, false, false, false)
+
+export function pageReducer(state = INITVAR, action: Action) {
 
   switch (action.type) {
 
     case GETPAGE: {
-      return state = {
-        home: true,
-        step1: false,
-        step2: false,
-        step3: false,
-        summary: false
-      }
+      return state
     }
     case SETPAGE: {
       return state = action.payload

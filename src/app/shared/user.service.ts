@@ -10,8 +10,6 @@ export class UserService {
 
   makeUserModel() {
     return new User('', '', '','', '', '','', '', '');
-    // if (this.userStore === "undefined") {
-    // }
   }
 
   setUserValue(val) {
