@@ -1,21 +1,17 @@
 import {Injectable} from "@angular/core";
 import { User } from './user.model';
-import { Status } from './status.model';
 
 @Injectable()
 export class UserService {
   private userStore;
-  private statusStore;
   private serverStore;
 
   constructor() { }
 
   makeUserModel() {
     return new User('', '', '','', '', '','', '', '');
-  }
-
-  makeStatusModel() {
-    return new Status(true, false, false, false, false);
+    // if (this.userStore === "undefined") {
+    // }
   }
 
   setUserValue(val) {
@@ -24,14 +20,6 @@ export class UserService {
 
   getUserValue() {
     return this.userStore;
-  }
-
-  setStatusValue(val) {
-    this.statusStore = val;
-  }
-
-  getStatusValue() {
-    return this.statusStore;
   }
 
   setServerValue(val) {

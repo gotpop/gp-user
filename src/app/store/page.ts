@@ -1,5 +1,6 @@
 // page.ts
 import { ActionReducer, Action } from '@ngrx/store';
+import { Status } from '../shared/status.model';
 
 export const GETPAGE = 'GETPAGE';
 export const SETPAGE = 'SETPAGE';
@@ -9,7 +10,6 @@ export function pageReducer(state = {}, action: Action) {
   switch (action.type) {
 
     case GETPAGE: {
-			console.log('Get page fired');
       return state = {
         home: true,
         step1: false,
@@ -19,8 +19,6 @@ export function pageReducer(state = {}, action: Action) {
       }
     }
     case SETPAGE: {
-      console.log('Set page state: ', state);
-			console.log('Set page payload: ', action.payload);
       return state = action.payload
     }
     default: {
