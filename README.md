@@ -18,4 +18,4 @@ https://github.com/ngrx/store
 
 http://bulma.io
 
-This is a test commit.
+This is a test commit. And Another.
